@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "dot-ignore.helloWorld",
-        "title": "Hello World"
+        "command": "dot-ignore.createGitignore",
+        "title": "Create git ignore"
       }
     ]
   },
