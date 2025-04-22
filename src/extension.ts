@@ -1,26 +1,46 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+import messages from './lib/messages';
+import options from './lib/options';
+import * as utils from './lib/utils';
+
 export function activate(context: vscode.ExtensionContext) {
+	const createGitignoreDisposable = vscode.commands.registerCommand('dot-ignore.createGitignore', async () => {
+		const option = await vscode.window.showQuickPick(options, {
+			placeHolder: messages.selectTemplate,
+		});
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "dot-ignore" is now active!');
+		if (!option) {
+			vscode.window.showInformationMessage(messages.noTemplateSelected);
+			return;
+		}
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('dot-ignore.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Dot Ignore!');
+		const templateContent = await utils.loadContentFromTemplate(option, context.extensionUri);
+
+		if (templateContent === undefined) {
+			return;
+		}
+
+		const workspaceRoot = utils.getWorkspaceFolder();
+		if (!workspaceRoot) {
+			return;
+		}
+
+		const gitignorePath = vscode.Uri.joinPath(workspaceRoot, '.gitignore');
+
+		try {
+			const doesFileExist = await utils.doesFileExist(gitignorePath);
+			if (doesFileExist) {
+				await utils.createFile(gitignorePath, option, templateContent);
+			} else {
+				vscode.window.showInformationMessage(messages.cancel);
+			}
+		} catch (error) {
+			vscode.window.showErrorMessage(messages.errorCreatingFile);
+		}
 	});
 
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(createGitignoreDisposable);
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() { }
