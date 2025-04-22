@@ -1,0 +1,73 @@
+/**
+ * @description An array of strings representing the available options for .gitignore templates.
+ *
+ * Each string corresponds to a specific technology, framework, or environment.
+ *
+ * The gitignore templates are sourced from the official GitHub gitignore repository:
+ * {@link https://github.com/github/gitignore}
+ *
+ * This array includes commonly used templates.
+ * Contributions to add more are welcome via Pull Requests.
+ */
+export default [
+  'Android',
+  'AppEngine',
+  'ArchLinuxPackages',
+  'C++',
+  'C',
+  'CMake',
+  'Clojure',
+  'CommonLisp',
+  'Composer',
+  'CUDA',
+  'D',
+  'Dart',
+  'Dotnet',
+  'Drupal',
+  'Elisp',
+  'Elixir',
+  'Elm',
+  'Erlang',
+  'ExtJs',
+  'Fancy',
+  'Firebase',
+  'Flutter',
+  'Fortran',
+  'GitHubPages',
+  'Go',
+  'Godot',
+  'Gradle',
+  'Haskell',
+  'Java',
+  'Jekyll',
+  'JENKINS_HOME',
+  'Joomla',
+  'Julia',
+  'Kotlin',
+  'Laravel',
+  'Lua',
+  'Maven',
+  'Node',
+  'Objective-C',
+  'OCaml',
+  'OracleForms',
+  'Perl',
+  'Prestashop',
+  'PureScript',
+  'Python',
+  'R',
+  'Rails',
+  'Ruby',
+  'Rust',
+  'Sass',
+  'Scala',
+  'SketchUp',
+  'Stella',
+  'Swift',
+  'Terraform',
+  'Unity',
+  'UnrealEngine',
+  'VisualStudio',
+  'WordPress',
+  'Zig'
+] as readonly string[];
