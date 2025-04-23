@@ -1,10 +1,11 @@
 /**
  * @description An array of strings representing the available options for .gitignore templates.
  *
- * Each string corresponds to a specific technology, framework, or environment.
+ * Each string corresponds to a specific technology, framework, or environment, and is used to generate a .gitignore file.
  *
  * The gitignore templates are sourced from the official GitHub gitignore repository:
  * {@link https://github.com/github/gitignore}
+ * Others such as Vite's or React's are sourced from their respective GitHub repositories.
  *
  * This array includes commonly used templates.
  * Contributions to add more are welcome via Pull Requests.
@@ -47,7 +48,9 @@ export default [
 	"Laravel",
 	"Lua",
 	"Maven",
+	"Next",
 	"Node",
+	"Nuxt",
 	"Objective-C",
 	"OCaml",
 	"OracleForms",
@@ -57,6 +60,7 @@ export default [
 	"Python",
 	"R",
 	"Rails",
+	"React",
 	"Ruby",
 	"Rust",
 	"Sass",
@@ -68,6 +72,8 @@ export default [
 	"Unity",
 	"UnrealEngine",
 	"VisualStudio",
+	"Vite",
+	"Vue",
 	"WordPress",
 	"Zig",
 ] as readonly string[];
