@@ -10,10 +10,10 @@ import messages from "./messages";
  * @returns The formatted message
  */
 function formatMessage(message: string, ...args: unknown[]): string {
-    return message.replace(/{(\d+)}/g, (match: string, index: string) => {
-        const argIndex = parseInt(index, 10);
-        return typeof args[argIndex] !== "undefined" ? String(args[argIndex]) : match;
-    });
+	return message.replace(/{(\d+)}/g, (match: string, index: string) => {
+		const argIndex = Number.parseInt(index, 10);
+		return typeof args[argIndex] !== "undefined" ? String(args[argIndex]) : match;
+	});
 }
 
 /**
@@ -23,21 +23,21 @@ function formatMessage(message: string, ...args: unknown[]): string {
  * @returns True if the operation should proceed (file doesn't exist or user chose Overwrite), false otherwise.
  */
 async function doesFileExist(path: vscode.Uri): Promise<boolean> {
-    try {
-        await vscode.workspace.fs.stat(path);
-        const overwrite = await vscode.window.showWarningMessage(
-            messages.gitignoreExistsInRoot,
-            { modal: true },
-            messages.overwrite,
-        );
-        return overwrite === messages.overwrite;
-    } catch (error) {
-        if (error instanceof vscode.FileSystemError && error.code === "FileNotFound") {
-            return true;
-        }
-        vscode.window.showErrorMessage(`${messages.errorCheckingFile}`);
-        return false;
-    }
+	try {
+		await vscode.workspace.fs.stat(path);
+		const overwrite = await vscode.window.showWarningMessage(
+			messages.gitignoreExistsInRoot,
+			{ modal: true },
+			messages.overwrite,
+		);
+		return overwrite === messages.overwrite;
+	} catch (error) {
+		if (error instanceof vscode.FileSystemError && error.code === "FileNotFound") {
+			return true;
+		}
+		vscode.window.showErrorMessage(`${messages.errorCheckingFile}`);
+		return false;
+	}
 }
 
 /**
@@ -48,11 +48,13 @@ async function doesFileExist(path: vscode.Uri): Promise<boolean> {
  * @param template The content to write to the file.
  */
 async function createFile(path: vscode.Uri, option: string, template: string): Promise<void> {
-    await vscode.workspace.fs.writeFile(path, Buffer.from(template, "utf8"));
-    vscode.window.showInformationMessage(formatMessage(messages.gitignoreCreatedWithTemplate, option));
+	await vscode.workspace.fs.writeFile(path, Buffer.from(template, "utf8"));
+	vscode.window.showInformationMessage(
+		formatMessage(messages.gitignoreCreatedWithTemplate, option),
+	);
 
-    const document = await vscode.workspace.openTextDocument(path);
-    await vscode.window.showTextDocument(document);
+	const document = await vscode.workspace.openTextDocument(path);
+	await vscode.window.showTextDocument(document);
 }
 
 /**
@@ -60,12 +62,12 @@ async function createFile(path: vscode.Uri, option: string, template: string): P
  * @returns The URI of the first workspace folder, or undefined if none exists.
  */
 function getWorkspaceFolder(): vscode.Uri | undefined {
-    const workspaceFolders = vscode.workspace.workspaceFolders;
-    if (!workspaceFolders || workspaceFolders.length === 0) {
-        vscode.window.showErrorMessage(messages.noWorkspaceFolderOpen);
-        return undefined;
-    }
-    return workspaceFolders[0].uri;
+	const workspaceFolders = vscode.workspace.workspaceFolders;
+	if (!workspaceFolders || workspaceFolders.length === 0) {
+		vscode.window.showErrorMessage(messages.noWorkspaceFolderOpen);
+		return undefined;
+	}
+	return workspaceFolders[0].uri;
 }
 
 /**
@@ -74,15 +76,20 @@ function getWorkspaceFolder(): vscode.Uri | undefined {
  * @param extensionUri The URI of the extension's root directory.
  * @returns The content of the template file as a string, or undefined if an error occurs.
  */
-async function loadContentFromTemplate(option: string, extensionUri: vscode.Uri): Promise<string | undefined> {
-    const templateFileName = `${option}.gitignore`;
-    const templatePath = vscode.Uri.joinPath(extensionUri, "src", "templates", templateFileName);
+async function loadContentFromTemplate(
+	option: string,
+	extensionUri: vscode.Uri,
+): Promise<string | undefined> {
+	const templateFileName = `${option}.gitignore`;
+	const templatePath = vscode.Uri.joinPath(extensionUri, "src", "templates", templateFileName);
 
-    try {
-        const fileContent = await vscode.workspace.fs.readFile(templatePath);
-        return Buffer.from(fileContent).toString("utf8");
-    } catch {
-        vscode.window.showErrorMessage(`${formatMessage(messages.errorLoadingTemplate, templateFileName)}`);
-        return undefined;
-    }
+	try {
+		const fileContent = await vscode.workspace.fs.readFile(templatePath);
+		return Buffer.from(fileContent).toString("utf8");
+	} catch {
+		vscode.window.showErrorMessage(
+			`${formatMessage(messages.errorLoadingTemplate, templateFileName)}`,
+		);
+		return undefined;
+	}
 }
