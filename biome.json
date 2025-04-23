@@ -20,7 +20,26 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"complexity": {
+				"noEmptyTypeParameters": "warn",
+				"noExcessiveCognitiveComplexity": "warn",
+				"noUselessCatch": "warn",
+				"useOptionalChain": "warn"
+			},
+			"style": {
+				"noNegationElse": "warn",
+				"noShoutyConstants": "error",
+				"useBlockStatements": "off",
+				"useConst": "warn",
+				"useExportType": "error",
+				"useImportType": "error",
+				"useTemplate": "error"
+			},
+			"suspicious": {
+				"noConsoleLog": "error",
+				"noExplicitAny": "error"
+			}
 		}
 	},
 	"javascript": {
