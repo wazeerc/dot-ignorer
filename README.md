@@ -1,71 +1,72 @@
-# Dot Ignore README
+# Dot Ignore
 
-This is the README for your extension "dot-ignore". After writing up a brief description, we recommend including the following sections.
+**Dot Ignore** is your smart assistant for managing `.gitignore` files directly within Visual Studio Code.
+
+Generate `.gitignore` files effortlessly using a wide range of curated templates, customize them as needed, and ensure sensitive files like `.env` are safely ignored in your Git repositories.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Generate `.gitignore`:** Quickly create `.gitignore` files using a comprehensive list of templates for various languages, frameworks, and environments (e.g., Node, Python, React, Vite, Java, Ruby, Go, and many more).
+- **Curated Templates:** Access templates sourced from the official GitHub gitignore repository and other project-specific sources.
+- **Simple & Fast:** Lightweight extension with zero configuration required.
 
-For example if there is an image subfolder under your extension project workspace:
+## Getting Started
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Install the "Dot Ignore" extension from the VS Code Marketplace.
+2. Open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
+3. Run the command: `Dot Ignore: Create git ignore`.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Usage
+
+1. Open your project workspace in VS Code.
+2. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`).
+3. Type `Create git ignore` and select the `Dot Ignore: Create git ignore` command.
+4. Choose the desired template from the quick pick list that appears.
+5. If a `.gitignore` file already exists in your workspace root, you'll be asked to confirm if you want to overwrite it.
+6. The selected template content will be added to the `.gitignore` file in your workspace root.
+
+*(Optional: Add a GIF demonstrating the usage here)*
+
+## Available Templates
+
+💡 The extension includes templates for many popular technologies, including:
+
+- Node.js
+- Python
+- React
+- Vite
+- Java
+- Ruby
+- Go
+- C++ / C
+- Rust
+- VisualStudio
+- Unity
+- UnrealEngine
+- ...and many more!
+
+(See the full list within the extension's quick pick menu)
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code version 1.99.0 or higher.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+🔌 This extension does not contribute any settings at this time.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Please report any issues or suggestions on the [issues page](https://github.com/wazeerc/dot-ignore/issues).
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1-RC
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- Initial release of Dot Ignore.
+- Feature: Generate `.gitignore` files from a list of templates.
+- Command: `dot-ignore.createGitignore`.
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Enjoy and keep your API keys safe!**
