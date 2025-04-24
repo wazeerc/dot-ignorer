@@ -1,8 +1,8 @@
 # Dot Ignore
 
-**Dot Ignore** is your smart assistant for managing `.gitignore` files directly within Visual Studio Code.
+**Dot Ignore** is here to help you manage `.gitignore` files directly within Visual Studio Code.
 
-Generate `.gitignore` files effortlessly using a wide range of curated templates, customize them as needed, and ensure sensitive files like `.env` are safely ignored in your Git repositories.
+Generate `.gitignore` files effortlessly using a wide range of curated templates and customize them as needed.
 
 ## Features
 
@@ -12,7 +12,7 @@ Generate `.gitignore` files effortlessly using a wide range of curated templates
 
 ## Getting Started
 
-1. Install the "Dot Ignore" extension from the VS Code Marketplace.
+1. Install the "Dot Ignore" extension from the VS Code Marketplace [here]().
 2. Open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
 3. Run the command: `Dot Ignore: Create git ignore`.
 
@@ -25,7 +25,7 @@ Generate `.gitignore` files effortlessly using a wide range of curated templates
 5. If a `.gitignore` file already exists in your workspace root, you'll be asked to confirm if you want to overwrite it.
 6. The selected template content will be added to the `.gitignore` file in your workspace root.
 
-*(Optional: Add a GIF demonstrating the usage here)*
+<img src="https://github.com/user-attachments/assets/50f55599-3113-408b-afaa-6e1c9aa6141c" alt="dot-ignore-demo" width="800">
 
 ## Available Templates
 
@@ -49,7 +49,7 @@ Generate `.gitignore` files effortlessly using a wide range of curated templates
 
 ## Requirements
 
-- Visual Studio Code version 1.99.0 or higher.
+⚡ Visual Studio Code version 1.99.0 or higher.
 
 ## Extension Settings
 
@@ -57,16 +57,16 @@ Generate `.gitignore` files effortlessly using a wide range of curated templates
 
 ## Known Issues
 
-Please report any issues or suggestions on the [issues page](https://github.com/wazeerc/dot-ignore/issues).
+🐞 Please report any issues or suggestions on the [issues page](https://github.com/wazeerc/dot-ignore/issues).
 
 ## Release Notes
 
-### 0.0.1-RC
+### 0.0.1-rc
 
-- Initial release of Dot Ignore.
+- Initial version of Dot Ignore.
 - Feature: Generate `.gitignore` files from a list of templates.
 - Command: `dot-ignore.createGitignore`.
 
 ---
 
-**Enjoy and keep your API keys safe!**
+🙌 **Enjoy and keep your API keys safe!**
