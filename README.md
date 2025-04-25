@@ -1,6 +1,6 @@
 # Dot Ignore
 
-<img src="./dot-ignore-logo.svg" alt="Dot Ignore Logo" width="200">
+<img src="./dot-ignore.png" alt="Dot Ignore Logo" width="200">
 
 **Dot Ignore** is here to help you manage `.gitignore` files directly within Visual Studio Code.
 

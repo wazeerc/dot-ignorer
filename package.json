@@ -1,15 +1,21 @@
 {
 	"name": "dot-ignore",
 	"displayName": "Dot Ignore",
-	"description": "Generate and manage .gitignore files with ease. Dot Ignore offers curated templates, editing tools, and checks to ensure files like .env are safely ignored in your Git repos.",
+	"description": "Generate and manage .gitignore files with ease.",
 	"version": "0.0.1",
+	"publisher": "wazeerc",
 	"engines": {
 		"vscode": "^1.99.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"keywords": [
+		"git",
+		"gitignore"
+	],
 	"activationEvents": [],
+	"icon": "./dot-ignore-logo.png",
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
