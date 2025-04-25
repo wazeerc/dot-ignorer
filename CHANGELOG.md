@@ -4,6 +4,18 @@ All notable changes to the "dot-ignorer" extension will be documented in this fi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## Published on Marketplace
 
-- Initial release
+## [0.0.2]
+
+### Changed
+
+- Rename project to Dot Ignorer
+
+## [0.0.1]
+
+### Added
+
+- Initial version of Dot Ignorer.
+- Feature: Generate `.gitignore` files from a list of templates.
+- Command: `dot-ignorer.createGitignore`.

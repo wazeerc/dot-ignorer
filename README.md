@@ -12,7 +12,7 @@ Generate `.gitignore` files effortlessly using a wide range of curated templates
 
 ## Getting Started
 
-1. Install the "Dot Ignorer" extension from the VS Code Marketplace [here]().
+1. Install the "Dot Ignorer" extension from the VS Code Marketplace [here](https://marketplace.visualstudio.com/items/?itemName=wazeerc.dot-ignorer).
 2. Open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
 3. Run the command: `Dot Ignorer: Create git ignore`.
 
@@ -61,11 +61,15 @@ Generate `.gitignore` files effortlessly using a wide range of curated templates
 
 ## Release Notes
 
-### 0.0.1-rc
+### 0.0.1
 
 - Initial version of Dot Ignorer.
 - Feature: Generate `.gitignore` files from a list of templates.
 - Command: `dot-ignorer.createGitignore`.
+
+### 0.0.2
+
+- Rename project to dot-ignorer
 
 ---
 
