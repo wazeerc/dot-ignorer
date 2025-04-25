@@ -6,12 +6,11 @@ import * as utils from "./lib/utils";
 
 export function activate(context: vscode.ExtensionContext): void {
 	const createGitignoreDisposable = vscode.commands.registerCommand(
-		"dot-ignore.createGitignore",
+		"dot-ignorer.createGitignore",
 		async () => {
 			const option = await vscode.window.showQuickPick(options, {
 				placeHolder: messages.selectTemplate,
 			});
-
 			if (!option) {
 				vscode.window.showInformationMessage(messages.noTemplateSelected);
 				return;

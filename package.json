@@ -1,12 +1,12 @@
 {
-	"name": "dot-ignore",
-	"displayName": "Dot Ignore",
+	"name": "dot-ignorer",
+	"displayName": "Dot Ignorer",
 	"description": "Generate and manage .gitignore files with ease.",
 	"version": "0.0.1",
 	"publisher": "wazeerc",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/wazeerc/dot-ignore"
+		"url": "https://github.com/wazeerc/dot-ignorer"
 	},
 	"engines": {
 		"vscode": "^1.99.0"
@@ -19,12 +19,12 @@
 		"gitignore"
 	],
 	"activationEvents": [],
-	"icon": "./dot-ignore.png",
+	"icon": "./dot-ignorer.png",
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "dot-ignore.createGitignore",
+				"command": "dot-ignorer.createGitignore",
 				"title": "Create git ignore"
 			}
 		]

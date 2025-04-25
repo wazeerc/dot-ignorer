@@ -1,8 +1,6 @@
-# Dot Ignore
+# Dot Ignorer
 
-<img src="./dot-ignore.png" alt="Dot Ignore Logo" width="200">
-
-**Dot Ignore** is here to help you manage `.gitignore` files directly within Visual Studio Code.
+**Dot Ignorer** is here to help you manage `.gitignore` files directly within Visual Studio Code.
 
 Generate `.gitignore` files effortlessly using a wide range of curated templates and customize them as needed.
 
@@ -14,15 +12,15 @@ Generate `.gitignore` files effortlessly using a wide range of curated templates
 
 ## Getting Started
 
-1. Install the "Dot Ignore" extension from the VS Code Marketplace [here]().
+1. Install the "Dot Ignorer" extension from the VS Code Marketplace [here]().
 2. Open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
-3. Run the command: `Dot Ignore: Create git ignore`.
+3. Run the command: `Dot Ignorer: Create git ignore`.
 
 ## Usage
 
 1. Open your project workspace in VS Code.
 2. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`).
-3. Type `Create git ignore` and select the `Dot Ignore: Create git ignore` command.
+3. Type `Create git ignore` and select the `Dot Ignorer: Create git ignore` command.
 4. Choose the desired template from the quick pick list that appears.
 5. If a `.gitignore` file already exists in your workspace root, you'll be asked to confirm if you want to overwrite it.
 6. The selected template content will be added to the `.gitignore` file in your workspace root.
@@ -59,15 +57,15 @@ Generate `.gitignore` files effortlessly using a wide range of curated templates
 
 ## Known Issues
 
-🐞 Please report any issues or suggestions on the [issues page](https://github.com/wazeerc/dot-ignore/issues).
+🐞 Please report any issues or suggestions on the [issues page](https://github.com/wazeerc/dot-ignorer/issues).
 
 ## Release Notes
 
 ### 0.0.1-rc
 
-- Initial version of Dot Ignore.
+- Initial version of Dot Ignorer.
 - Feature: Generate `.gitignore` files from a list of templates.
-- Command: `dot-ignore.createGitignore`.
+- Command: `dot-ignorer.createGitignore`.
 
 ---
 
