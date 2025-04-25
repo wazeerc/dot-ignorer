@@ -4,6 +4,10 @@
 	"description": "Generate and manage .gitignore files with ease.",
 	"version": "0.0.1",
 	"publisher": "wazeerc",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wazeerc/dot-ignore"
+	},
 	"engines": {
 		"vscode": "^1.99.0"
 	},
@@ -15,7 +19,7 @@
 		"gitignore"
 	],
 	"activationEvents": [],
-	"icon": "./dot-ignore-logo.png",
+	"icon": "./dot-ignore.png",
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
