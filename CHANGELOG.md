@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Published on Marketplace
 
+## [0.0.3]
+
+### Fixed
+
+- Fixed a bug where template files weren't being found when the extension was installed from the marketplace.
+
 ## [0.0.2]
 
 ### Changed
