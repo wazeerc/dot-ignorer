@@ -1,0 +1,16 @@
+# MongoDB-specific files
+# Ignore MongoDB data files, logs, and other files
+/mongodb_data/
+/mongodb_logs/
+
+/data/
+/logs/
+
+# MongoDB PID file
+/mongodb.pid
+
+# MongoDB configuration file
+/mongodb.conf
+
+# Local data
+local/
