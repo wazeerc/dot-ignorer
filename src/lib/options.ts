@@ -76,4 +76,5 @@ export default [
 	"Vue",
 	"WordPress",
 	"Zig",
+	"MongoDB",
 ] as readonly string[];
