@@ -1,5 +1,8 @@
 # Dot Ignorer
 
+![Marketplace](https://vsmarketplacebadges.dev/version-short/wazeerc.dot-ignorer.svg)
+![Ratings](https://vsmarketplacebadges.dev/rating-star/wazeerc.dot-ignorer.svg)
+
 **Dot Ignorer** is here to help you manage `.gitignore` files directly within Visual Studio Code.
 
 Generate `.gitignore` files effortlessly using a wide range of curated templates and customize them as needed.
