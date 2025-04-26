@@ -1,98 +1,50 @@
-# Contributing
+# Contributing to Dot Ignorer
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. 
+Thank you for considering contributing to Dot Ignorer! We welcome contributions that help improve the extension, especially adding new `.gitignore` templates.
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+## How to Contribute
 
-## Pull Request Process
+### Reporting Issues
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+If you encounter a bug or have a suggestion for improvement, please check the [issues page](https://github.com/wazeerc/dot-ignorer/issues) to see if a similar issue already exists. If not, feel free to open a new issue.
 
-- Ensure any install or build dependencies are removed before the end of the layer when doing a 
-   build.
-- Update the README.md with details of changes to the interface, this includes new environment 
-   variables, exposed ports, useful file locations and container parameters.
-- Increase the version numbers in any examples files and the README.md to the new version that this
-   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-- You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
-   do not have permission to do that, you may request the second reviewer to merge it for you.
+### Adding New `.gitignore` Templates
+
+We rely on the community to keep our template list comprehensive and up-to-date. If you want to add a new template:
+
+1. **Find or Create the Template:** Obtain the `.gitignore` content for the technology you want to add. Good sources include official project documentation or the [GitHub gitignore repository](https://github.com/github/gitignore).
+2. **Add the Template File:**
+    * Create a new file in the `src/templates/` directory.
+    * The filename should be descriptive and follow the pattern `<TechnologyName>.gitignore` (e.g., `MyFramework.gitignore`).
+3. **Update the Options List:**
+    * Open the `src/lib/options.ts` file.
+    * Add the name of your template (without the `.gitignore` extension, e.g., `"MyFramework"`) to the exported array. Keep the list alphabetically sorted if possible.
+4. **Test Your Changes:**
+    * Build the extension locally (`pnpm run compile`).
+    * Run the extension in a development host (`F5` in VS Code).
+    * Use the `Dot Ignorer: Create git ignore` command and verify your new template appears in the list and generates the correct `.gitignore` file.
+5. **Submit a Pull Request:**
+    * Commit your changes.
+    * Push your changes to your fork.
+    * Open a pull request against the `main` branch of the [wazeerc/dot-ignorer](https://github.com/wazeerc/dot-ignorer) repository.
+    * Clearly describe the template you added in the pull request description.
+
+### Development Setup
+
+1. **Prerequisites:**
+    * [Node.js](https://nodejs.org/) (LTS version recommended)
+    * [pnpm](https://pnpm.io/installation)
+    * [Git](https://git-scm.com/)
+    * [VS Code](https://code.visualstudio.com/)
+2. **Fork & Clone:** Fork the repository and clone it locally.
+3. **Install Dependencies:** Run `pnpm install` in the project root.
+4. **Build:** Run `pnpm run compile`.
+5. **Run in Development:** Open the project in VS Code and press `F5` to launch the Extension Development Host.
+
+### Code Style
+
+We use Biome for formatting and linting. Please run `pnpm run biome` before committing your changes to ensure they adhere to the project's style guidelines.
 
 ## Code of Conduct
 
-### Our Pledge
-
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our project and
-our community a harassment-free experience for everyone, regardless of age, body
-size, disability, ethnicity, gender identity and expression, level of experience,
-nationality, personal appearance, race, religion, or sexual identity and
-orientation.
-
-### Our Standards
-
-Examples of behavior that contributes to creating a positive environment
-include:
-
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
-
-Examples of unacceptable behavior by participants include:
-
-* The use of sexualized language or imagery and unwelcome sexual attention or
-advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or electronic
-  address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
-
-### Our Responsibilities
-
-Project maintainers are responsible for clarifying the standards of acceptable
-behavior and are expected to take appropriate and fair corrective action in
-response to any instances of unacceptable behavior.
-
-Project maintainers have the right and responsibility to remove, edit, or
-reject comments, commits, code, wiki edits, issues, and other contributions
-that are not aligned to this Code of Conduct, or to ban temporarily or
-permanently any contributor for other behaviors that they deem inappropriate,
-threatening, offensive, or harmful.
-
-### Scope
-
-This Code of Conduct applies both within project spaces and in public spaces
-when an individual is representing the project or its community. Examples of
-representing a project or community include using an official project e-mail
-address, posting via an official social media account, or acting as an appointed
-representative at an online or offline event. Representation of a project may be
-further defined and clarified by project maintainers.
-
-### Enforcement
-
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at [INSERT EMAIL ADDRESS]. All
-complaints will be reviewed and investigated and will result in a response that
-is deemed necessary and appropriate to the circumstances. The project team is
-obligated to maintain confidentiality with regard to the reporter of an incident.
-Further details of specific enforcement policies may be posted separately.
-
-Project maintainers who do not follow or enforce the Code of Conduct in good
-faith may face temporary or permanent repercussions as determined by other
-members of the project's leadership.
-
-### Attribution
-
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
-available at [http://contributor-covenant.org/version/1/4][version]
-
-[homepage]: http://contributor-covenant.org
-[version]: http://contributor-covenant.org/version/1/4/
+Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.

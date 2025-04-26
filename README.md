@@ -50,10 +50,22 @@ Generate `.gitignore` files effortlessly using a wide range of curated templates
 ## Requirements
 
 ⚡ Visual Studio Code version 1.99.0 or higher.
+⚡ [Node.js](https://nodejs.org/) (LTS version recommended)
+⚡ [pnpm](https://pnpm.io/installation)
 
 ## Extension Settings
 
 🔌 This extension does not contribute any settings at this time.
+
+## Contributing
+
+Contributions are welcome! If you'd like to add a new `.gitignore` template or improve the extension, please see the [Contributing Guidelines](./CONTRIBUTING.md).
+
+Adding a template is easy:
+
+1. Add your `<YourTemplateName>.gitignore` file to the `src/templates/` directory.
+2. Add the template name (`"YourTemplateName"`) to the list in `src/lib/options.ts`.
+3. Submit a Pull Request!
 
 ## Known Issues
 
