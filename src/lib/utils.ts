@@ -81,7 +81,7 @@ async function loadContentFromTemplate(
 	extensionUri: vscode.Uri,
 ): Promise<string | undefined> {
 	const templateFileName = `${option}.gitignore`;
-	const templatePath = vscode.Uri.joinPath(extensionUri, "src", "templates", templateFileName);
+	const templatePath = vscode.Uri.joinPath(extensionUri, "dist", "templates", templateFileName);
 
 	try {
 		const fileContent = await vscode.workspace.fs.readFile(templatePath);

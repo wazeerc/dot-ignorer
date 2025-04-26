@@ -1,7 +1,28 @@
 const esbuild = require("esbuild");
+const fs = require("node:fs");
+const path = require("node:path");
 
 const production = process.argv.includes('--production');
 const watch = process.argv.includes('--watch');
+
+function copyDirRecursiveSync(src, dest) {
+	if (!fs.existsSync(dest)) {
+		fs.mkdirSync(dest, { recursive: true });
+	}
+
+	const entries = fs.readdirSync(src, { withFileTypes: true });
+
+	for (const entry of entries) {
+		const srcPath = path.join(src, entry.name);
+		const destPath = path.join(dest, entry.name);
+
+		if (entry.isDirectory()) {
+			copyDirRecursiveSync(srcPath, destPath);
+		} else {
+			fs.copyFileSync(srcPath, destPath);
+		}
+	}
+}
 
 /**
  * @type {import('esbuild').Plugin}
@@ -11,14 +32,12 @@ const esbuildProblemMatcherPlugin = {
 
 	setup(build) {
 		build.onStart(() => {
-			console.log('[watch] build started');
 		});
 		build.onEnd((result) => {
-			result.errors.forEach(({ text, location }) => {
+			for (const { text, location } of result.errors) {
 				console.error(`✘ [ERROR] ${text}`);
 				console.error(`    ${location.file}:${location.line}:${location.column}:`);
-			});
-			console.log('[watch] build finished');
+			}
 		});
 	},
 };
@@ -42,6 +61,11 @@ async function main() {
 			esbuildProblemMatcherPlugin,
 		],
 	});
+
+	const templatesSource = path.join(__dirname, 'src', 'templates');
+	const templatesDest = path.join(__dirname, 'dist', 'templates');
+	copyDirRecursiveSync(templatesSource, templatesDest);
+
 	if (watch) {
 		await ctx.watch();
 	} else {
