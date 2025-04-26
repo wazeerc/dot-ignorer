@@ -83,6 +83,10 @@ Adding a template is easy:
 
 - Rename project to dot-ignorer
 
+### 0.0.3
+
+- Fixed a bug where template files weren't being found when the extension was installed from the marketplace.
+
 ---
 
 🙌 **Enjoy and keep your API keys safe!**
