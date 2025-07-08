@@ -58,9 +58,7 @@ media/
 staticfiles/
 static/
 
-# Django migrations
-*/migrations/*
-!*/migrations/__init__.py
+# Keep migrations under version control (recommended by Django)
 
 # PyCharm
 .idea/
