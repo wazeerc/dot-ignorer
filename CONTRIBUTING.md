@@ -2,6 +2,9 @@
 
 Thank you for considering contributing to Dot Ignorer! We welcome contributions that help improve the extension, especially adding new `.gitignore` templates.
 
+> [!IMPORTANT]  
+> We expect Contributors to be pro-active and reply to conversations in the PR thread. Failure do to so might result in PRs being closed.
+
 ## How to Contribute
 
 ### Reporting Issues
