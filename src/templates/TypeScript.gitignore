@@ -1,0 +1,69 @@
+# TypeScript.gitignore - Comprehensive .gitignore for TypeScript projects
+#
+# Node modules
+node_modules/
+
+# Build output
+lib/
+dist/
+build/
+out/
+coverage/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Compiled JavaScript
+*.js
+*.jsx
+*.js.map
+*.jsx.map
+
+# Compiled TypeScript
+*.ts.map
+*.tsx.map
+
+# Declaration files
+*.d.ts
+*.d.ts.map
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test output
+junit.xml
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional REPL history
+.node_repl_history
+
+# End of TypeScript.gitignore
