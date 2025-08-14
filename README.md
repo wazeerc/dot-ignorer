@@ -92,4 +92,39 @@ Adding a template is easy:
 
 ---
 
+## 👨‍💻 Contributors
+
+Dot Ignorer has a vibrant community of happy users and delightful contributors. Without all the time and help from our contributors, it wouldn't be so awesome.
+
+Thank you so much!
+
+<table align="center">
+  <tr>
+    <td align="center" valign="middle">
+      <a href="https://github.com/wazeerc">
+        <img src="https://github.com/wazeerc.png" width="80" height="80" alt="@wazeerc" /><br />
+        <sub><b>@wazeerc</b></sub>
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://github.com/prathamhanda">
+        <img src="https://github.com/prathamhanda.png" width="80" height="80" alt="@prathamhanda" /><br />
+        <sub><b>@prathamhanda</b></sub>
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://github.com/zahntheo">
+        <img src="https://github.com/zahntheo.png" width="80" height="80" alt="@zahntheo" /><br />
+        <sub><b>@zahntheo</b></sub>
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="#">
+        <img src="https://miro.medium.com/v2/resize:fit:700/0*oRRpMJ9XqkRnYLhW.png" width="80" height="80" alt="@copilot" /><br />
+        <sub><b>@copilot</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
 🙌 **Enjoy and keep your API keys safe!**
