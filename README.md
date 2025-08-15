@@ -90,6 +90,19 @@ Adding a template is easy:
 
 - Fixed a bug where template files weren't being found when the extension was installed from the marketplace.
 
+## 👨‍💻 Contributors
+
+Dot Ignorer has a vibrant community of happy users and delightful contributors. Without all the time and help from our contributors, it wouldn't be so awesome.
+
+Thank you so much!
+
+
+<div align="center">
+<a href="https://github.com/wazeerc/dot-ignorer/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wazeerc/dot-ignorer" />
+</a>
+</div>
+
 ---
 
 🙌 **Enjoy and keep your API keys safe!**
