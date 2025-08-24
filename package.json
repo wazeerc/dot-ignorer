@@ -2,7 +2,7 @@
 	"name": "dot-ignorer",
 	"displayName": "Dot Ignorer",
 	"description": "Generate and manage .gitignore files with ease.",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "wazeerc",
 	"repository": {
 		"type": "git",
